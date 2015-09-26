@@ -36,12 +36,12 @@ $app->withEloquent();
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\Handler::class
+    CodeAgenda\Exceptions\Handler::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
+    CodeAgenda\Console\Kernel::class
 );
 
 /*
@@ -92,7 +92,7 @@ $app->singleton(
 |
 */
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+$app->group(['namespace' => 'CodeAgenda\Http\Controllers'], function ($app) {
     require __DIR__.'/../app/Http/routes.php';
 });
 
