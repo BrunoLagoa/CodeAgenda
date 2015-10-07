@@ -4,7 +4,7 @@ namespace CodeAgenda\Http\Controllers;
 
 
 use CodeAgenda\Entities\Pessoa;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class AgendaController extends Controller
 {
