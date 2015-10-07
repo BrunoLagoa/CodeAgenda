@@ -16,3 +16,4 @@ $app->get('/', function () use ($app) {
 */
 
 $app->get('/', ['as' => 'agenda.index', 'uses' => 'IndexController@index']);
+$app->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'IndexController@index']);

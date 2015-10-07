@@ -1,20 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bruno
- * Date: 26/09/2015
- * Time: 01:26
- */
 
 namespace CodeAgenda\Http\Controllers;
 
 
+use CodeAgenda\Entities\Pessoa;
+
 class IndexController extends Controller
 {
 
-    public function index()
+    public function index($letra = "A")
     {
-        return view('agenda');
+        $pessoas = Pessoa::where('apelido', 'like', "$letra%")->get();
+        return view('agenda', compact('pessoas'));
     }
 
 }
