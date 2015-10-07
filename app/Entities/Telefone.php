@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bruno
- * Date: 26/09/2015
- * Time: 01:46
- */
 
 namespace CodeAgenda\Entities;
 
@@ -22,5 +16,10 @@ class Telefone extends Model
         'prefixo',
         'sufixo'
     ];
+
+    public function getNumeroAttribute()
+    {
+        return "{$this->codpaís} ({$this->ddd}) {$this->prefixo}-{$this->sufixo}";
+    }
 
 }

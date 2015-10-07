@@ -11,7 +11,8 @@ elixir(function(mix) {
 
         .scripts([
             'jquery.js',
-            'bootstrap.js'
+            'bootstrap.js',
+            'custom.js'
         ], 'public/js/scripts.js')
 
         .less('app.less');
