@@ -24,13 +24,13 @@
         <div class="col-lg-12 page-header">
             <h1>
                 Code.Education <br/>
-                <small><i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefônica</small>
+                <small><a href="{{ route('agenda.index') }}"><i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefônica</a></small>
                 <small class="pull-right">
-                    <form class="form-inline" action="#" method="post">
+                    <form class="form-inline" action="{{ route('agenda.busca') }}" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Pesquisar Contato...">
+                            <input type="text" name="busca" class="form-control" placeholder="Pesquisar Contato...">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
                             </span>
                         </div><!-- /input-group -->
                     </form>
@@ -40,7 +40,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            @foreach(range('A','Z') as $letra)
+            @foreach($letras as $letra)
                 <a href="{{ route('agenda.letra', ['letra' => $letra]) }}" class="btn btn-primary btn-xs">{{ $letra }}</a>
             @endforeach
         </div>
