@@ -8,7 +8,7 @@
     <title>Code Agenda</title>
 
     <!-- Bootstrap -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="{{ url('css/app.css') }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,6 +56,6 @@
 </div>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/scripts.js"></script>
+<script src="{{ url('js/scripts.js') }}"></script>
 </body>
 </html>
