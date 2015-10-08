@@ -21,6 +21,8 @@ $app->post('/busca', ['as' => 'agenda.busca', 'uses' => 'AgendaController@busca'
 
 $app->post('/contato', ['as' => 'pessoa.store', 'uses' => 'PessoaController@store']);
 $app->get('/contato/novo', ['as' => 'pessoa.create', 'uses' => 'PessoaController@create']);
+$app->get('/contato/{id}/editar', ['as' => 'pessoa.edit', 'uses' => 'PessoaController@edit']);
+$app->put('/contato/{id}', ['as' => 'pessoa.update', 'uses' => 'PessoaController@update']);
 $app->get('/contato/{id}/apagar', ['as' => 'pessoa.delete', 'uses' => 'PessoaController@delete']);
 $app->delete('/contato/{id}', ['as' => 'pessoa.destroy', 'uses' => 'PessoaController@destroy']);
 
