@@ -19,8 +19,6 @@ class TelefoneController extends Controller
 
     public function store(Request $request, $id)
     {
-        $pessoa = Pessoa::find($id);
-
         $validator = Validator::make($request->all(), [
             'descricao' => 'required|min:4|max:50',
             'codpais' => 'required|min:2|max:8',
@@ -30,11 +28,11 @@ class TelefoneController extends Controller
         ]);
 
         if($validator->fails()) {
-            return redirect()->route('telefone.create')->withErrors($validator)->withInput();
+            return redirect()->route('telefone.create', ['id' => $id])->withErrors($validator)->withInput();
         }
 
-        Telefone::firstOrCreate(["pessoa_id" => $id, $request->all()]);
-
+        $pessoa = Pessoa::find($id);
+        Telefone::create($request->all(),['pessoa_id'=>$pessoa->id]);
         $letra = strtoupper(substr($pessoa->apelido,0,1));
         return redirect()->route('agenda.letra', ['letra' => $letra]);
     }
