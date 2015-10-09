@@ -26,5 +26,8 @@ $app->put('/contato/{id}', ['as' => 'pessoa.update', 'uses' => 'PessoaController
 $app->get('/contato/{id}/apagar', ['as' => 'pessoa.delete', 'uses' => 'PessoaController@delete']);
 $app->delete('/contato/{id}', ['as' => 'pessoa.destroy', 'uses' => 'PessoaController@destroy']);
 
+
+$app->post('/telefone/{id}/store', ['as' => 'telefone.store', 'uses' => 'telefoneController@store']);
+$app->get('/telefone/{id}/novo', ['as' => 'telefone.create', 'uses' => 'telefoneController@create']);
 $app->get('/telefone/{id}/apagar', ['as' => 'telefone.delete', 'uses' => 'TelefoneController@delete']);
 $app->delete('/telefone/{id}', ['as' => 'telefone.destroy', 'uses' => 'TelefoneController@destroy']);
