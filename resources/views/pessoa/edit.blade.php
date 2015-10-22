@@ -44,5 +44,6 @@
             </div>
         @endif
         @include('partials.telefones', ['telefones' => $pessoa->telefones])
+        @include('partials.emails', ['emails' => $pessoa->emails])
     </div>
 @endsection
