@@ -1,6 +1,8 @@
 <p><a href="{{ route('telefone.create', ['id' => $pessoa->id]) }}" class="label label-primary">Novo Telefone</a>
 <a href="{{ route('email.create', ['id' => $pessoa->id]) }}" class="label label-primary">Novo Email</a></p>
-Telefone
+@if(count($telefones))
+    Telefone
+@endif
 <table class="table table-hover">
     @foreach($telefones as $telefone)
         <tr>
