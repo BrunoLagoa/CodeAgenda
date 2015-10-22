@@ -16,5 +16,6 @@
     <div class="panel-body">
         <h3>{{ $pessoa->nome }}</h3>
         @include('partials.telefones', ['telefones' => $pessoa->telefones])
+        @include('partials.emails', ['emails' => $pessoa->emails])
     </div>
 </div>

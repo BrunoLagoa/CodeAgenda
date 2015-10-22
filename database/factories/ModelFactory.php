@@ -38,3 +38,11 @@ $factory->define(\CodeAgenda\Entities\Telefone::class, function($faker) {
         'pessoa_id' => $faker->numberBetween(1,30)
     ];
 });
+
+$factory->define(\CodeAgenda\Entities\Email::class, function($faker) {
+    return [
+        'descricao' => $faker->randomElement(['Pessoal', 'Comercial']),
+        'email' => $faker->email,
+        'pessoa_id' => $faker->numberBetween(1,30)
+    ];
+});

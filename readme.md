@@ -17,7 +17,20 @@ Curso Lumen - Code Education
  - Criar um controller chamado AgendaController e criar um método chamado index para retornar uma view padrão
  - Nas rotas, criar a rota / apontando para o método index do AgendaController. Não se esqueça de nomear sua rota
  
-
+## Fase 2 do projeto
+ 
+ - Instalar o Bootstrap e Fontawesome usando o Bower e Gulp
+ - Modificar a lista de letras (A | B | C | etc) trazendo somente letras que contém pessoas
+ - Modificar o cabeçalho do painel de pessoas mostrando o ícone “fa fa-female” se a pessoa for mulher ou “fa fa-male” se a pessoa for homem. O ícone deve ficar à esquerda do Apelido
+ - Criar a pesquisa de pessoas, buscando por nome ou apelido
+ - Criar dois métodos, um para apagar contatos e outro para apagar telefones, e implementá-los no frontend
+ 
+## Fase 3 do projeto Final
+ 
+ - Finalizar o sistema fazendo o CRUD completo de Telefones
+ - Desafio (opcional)
+ - Adicionar ao sistema a funcionalidade de cadastrar N e-mails por pessoa
+ - Alterar o Painel de Contato e exibir telefones e e-mails usando nav tabs do Bootstrap
  
  
 ------------------------------------------------------------------------------------------

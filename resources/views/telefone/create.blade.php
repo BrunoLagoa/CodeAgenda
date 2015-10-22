@@ -6,13 +6,13 @@
             <div class="form-group">
                 <label for="descricao" class="col-sm-3 control-label">Descrição</label>
                 <div class="col-sm-8">
-                    <input type="text" name="descricao" class="form-control" id="descricao" value="{{ old('descrição') }}" placeholder="Descrição">
+                    <input type="text" name="descrição" class="form-control" id="descrição" value="{{ old('descrição') }}" placeholder="Descrição">
                 </div>
             </div>
             <div class="form-group">
                 <label for="codpais" class="col-sm-3 control-label">Código do País</label>
                 <div class="col-sm-3">
-                    <input type="text" name="codpais" class="form-control" id="codpais" maxlength="8" value="{{ old('codpaís') }}" placeholder="Cód do País">
+                    <input type="text" name="codpaís" class="form-control" id="codpais" maxlength="8" value="{{ old('codpaís') }}" placeholder="Cód do País">
                 </div>
             </div>
             <div class="form-group">

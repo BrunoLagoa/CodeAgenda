@@ -27,7 +27,12 @@ $app->get('/contato/{id}/apagar', ['as' => 'pessoa.delete', 'uses' => 'PessoaCon
 $app->delete('/contato/{id}', ['as' => 'pessoa.destroy', 'uses' => 'PessoaController@destroy']);
 
 
-$app->post('/telefone/{id}/store', ['as' => 'telefone.store', 'uses' => 'telefoneController@store']);
-$app->get('/telefone/{id}/novo', ['as' => 'telefone.create', 'uses' => 'telefoneController@create']);
+$app->post('/telefone/{id}/store', ['as' => 'telefone.store', 'uses' => 'TelefoneController@store']);
+$app->get('/telefone/{id}/novo', ['as' => 'telefone.create', 'uses' => 'TelefoneController@create']);
 $app->get('/telefone/{id}/apagar', ['as' => 'telefone.delete', 'uses' => 'TelefoneController@delete']);
 $app->delete('/telefone/{id}', ['as' => 'telefone.destroy', 'uses' => 'TelefoneController@destroy']);
+
+$app->post('/email/{id}/store', ['as' => 'email.store', 'uses' => 'EmailController@store']);
+$app->get('/email/{id}/novo', ['as' => 'email.create', 'uses' => 'EmailController@create']);
+$app->get('/email/{id}/apagar', ['as' => 'email.delete', 'uses' => 'EmailController@delete']);
+$app->delete('/email/{id}', ['as' => 'email.destroy', 'uses' => 'EmailController@destroy']);
